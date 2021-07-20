@@ -1,4 +1,4 @@
-from logging_utils import info, error
+from logging_utils import info
 import logging
 import threading
 
