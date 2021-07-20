@@ -6,15 +6,23 @@ logging.basicConfig(level=logging.DEBUG, format=THREAD_FORMAT)
 
 BALANCE = 0
 
+lock = threading.Lock()
+
 def deposit() -> None:
     global BALANCE
-    for _ in range(0, 1000000):
-        BALANCE += 10
+    for _ in range(0, 100000):
+        with lock:
+            #lock.acquire()
+            BALANCE += 10
+            #lock.release()
 
 def withdrawal() -> None:
     global BALANCE
-    for _ in range(0, 1000000):
-        BALANCE -= 10
+    for _ in range(0, 100000):
+        with lock:
+            #lock.acquire()
+            BALANCE -= 10
+            #lock.release()
 
 if __name__ == '__main__':
     thread1 = threading.Thread(target=deposit)
