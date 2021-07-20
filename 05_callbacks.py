@@ -1,10 +1,10 @@
-from logging_utils import info, error, THREAD_FORMAT
+from logging_utils import info, error
 import logging
 import requests
 import threading
 from random import randint
 
-logging.basicConfig(level=logging.DEBUG, format=THREAD_FORMAT)
+logging.basicConfig(level=logging.DEBUG, format="%(message)s")
 
 def get_pokemon_name(response_json):
     name = response_json.get("forms")[0].get("name")
