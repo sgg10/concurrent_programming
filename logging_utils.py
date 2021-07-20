@@ -2,6 +2,7 @@ import logging
 from colorama import Fore
 
 THREAD_FORMAT = "%(thread)s - %(threadName)s: %(message)s"
+ONLY_MESSAGE_FORMAT = "%(message)s"
 
 def debug(message):
     logging.debug(f"{Fore.GREEN}{message}{Fore.RESET}")
