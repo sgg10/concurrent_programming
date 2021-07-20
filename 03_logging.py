@@ -1,5 +1,5 @@
 import logging
-from colorama import init, Fore, Style
+from colorama import Fore
 
 logging.basicConfig(
     level=logging.DEBUG,
