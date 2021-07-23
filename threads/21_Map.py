@@ -1,5 +1,5 @@
 from typing import Iterable, Union
-from utils.logging_utils import info, THREAD_FORMAT
+from logging_utils import info, THREAD_FORMAT
 import logging
 import threading
 from time import sleep
